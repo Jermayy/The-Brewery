@@ -2,6 +2,9 @@
 import * as React from 'react';
 
 import Header from './header';
+
+import Body from './body';
+
 import './App.css';
 
 const App = (): React.Node => {
@@ -15,6 +18,7 @@ const App = (): React.Node => {
   return (
     <div className="App" style={Styles.main}>
       <Header />
+      <Body />
     </div>
   );
 };
