@@ -1,5 +1,7 @@
-//@flow
+// @flow
+
 import * as React from 'react';
+
 import TempSwitch from './tempSwitch';
 
 const Header = (): React.Node => {

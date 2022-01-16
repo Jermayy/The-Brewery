@@ -1,31 +1,35 @@
 // @flow
 import * as React from 'react';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
+import { StyleSheet, css } from 'aphrodite';
 
 const TempSwitch = (): React.Node => {
   const [temp, setTemp] = React.useState('C');
 
-  const Styles = {
+  const Styles = StyleSheet.create({
     tempBox: {
       position: 'relative',
       display: 'flex',
-      alignItems: 'center',
+      textAlign: 'center',
       cursor: 'pointer',
-    },
-    snowflake: {
-      position: 'absolute',
-      right: '16px',
-      opacity: 0.3,
+
+      ':hover': {
+        opacity: 0.5,
+      },
     },
     tempText: {
       position: 'absolute',
-      right: '45px',
-      fontSize: '40px',
+      inset: 0,
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      fontWeight: 'bold',
+      fontSize: '25px',
     },
-  };
+  });
 
-  const switchTemp = (temp: string) => {
-    if (temp === 'C') {
+  const switchTemp = (temperature: string) => {
+    if (temperature === 'C') {
       setTemp('F');
     } else {
       setTemp('C');
@@ -33,13 +37,18 @@ const TempSwitch = (): React.Node => {
   };
 
   return (
-    <div style={Styles.tempBox} onClick={() => switchTemp(temp)}>
+    <div
+      className={css(Styles.tempBox)}
+      onClick={() => switchTemp(temp)}
+    >
       <AcUnitIcon
         color="primary"
-        sx={{ fontSize: 100 }}
-        style={Styles.snowflake}
+        sx={{ fontSize: 60 }}
       />
-      <div style={Styles.tempText}>°{temp}</div>
+      <div className={css(Styles.tempText)}>
+        °
+        {temp}
+      </div>
     </div>
   );
 };

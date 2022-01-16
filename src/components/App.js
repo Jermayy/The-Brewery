@@ -1,22 +1,22 @@
-//@flow
+// @flow
 import * as React from 'react';
-import Header from './header'
+
+import Header from './header';
 import './App.css';
 
 const App = (): React.Node => {
- 
- const Styles = {
-   main: {
-     display: 'flex',
-     flexDirection: 'column',
-   }
- }
+  const Styles = {
+    main: {
+      display: 'flex',
+      flexDirection: 'column',
+    },
+  };
 
-
-return (
+  return (
     <div className="App" style={Styles.main}>
-    <Header/>
+      <Header />
     </div>
-  );}
+  );
+};
 
 export default App;
