@@ -8,12 +8,12 @@ import BeerContainer from './beerContainer';
 const ContainerBody = (): React.Node => {
   const Styles = StyleSheet.create({
     containerBody: {
+      display: 'flex',
       flex: 1,
       flexDirection: 'column',
-      margin: '48 96px',
-      borderRadius: 8,
+      margin: '48px 96px',
+      borderRadius: '8px',
       backgroundColor: 'grey',
-
     },
     containerRow: {
       display: 'flex',
