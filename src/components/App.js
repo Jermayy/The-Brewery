@@ -5,6 +5,8 @@ import Header from './header';
 
 import Body from './body';
 
+import Footer from './footer';
+
 import './App.css';
 
 const App = (): React.Node => {
@@ -19,6 +21,7 @@ const App = (): React.Node => {
     <div className="App" style={Styles.main}>
       <Header />
       <Body />
+      <Footer />
     </div>
   );
 };
