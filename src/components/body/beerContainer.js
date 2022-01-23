@@ -3,7 +3,11 @@ import * as React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import AddIcon from '@mui/icons-material/Add';
 
-const BeerContainer = (): React.Node => {
+type Props = {
+  onClick: () => void,
+};
+
+const BeerContainer = ({ onClick }: Props): React.Node => {
   const Styles = StyleSheet.create({
     container: {
       display: 'flex',
@@ -26,7 +30,7 @@ const BeerContainer = (): React.Node => {
   });
 
   return (
-    <div className={css(Styles.container)}>
+    <div className={css(Styles.container)} onClick={onClick}>
       <div className={css(Styles.iconBox)}>
         <AddIcon className={css(Styles.addIcon)} />
       </div>
