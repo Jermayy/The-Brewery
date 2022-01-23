@@ -4,7 +4,7 @@ import { StyleSheet, css } from 'aphrodite';
 import AddIcon from '@mui/icons-material/Add';
 
 type Props = {
-  onClick: () => void,
+  onClick?: () => void,
 };
 
 const BeerContainer = ({ onClick }: Props): React.Node => {
