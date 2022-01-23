@@ -7,6 +7,7 @@ import ContainerBody from './containerBody';
 const Body = (): React.Node => {
   const Styles = StyleSheet.create({
     body: {
+      minHeight: '100vh',
       display: 'flex',
       justifyContent: 'space-around',
       itemAlign: 'center',
