@@ -18,17 +18,38 @@ const ButtonOptions = ({ onClick }: Props): React.Node => {
       flexDirection: 'column',
       alignItems: 'center',
       borderRadius: '90px',
-      border: 'solid black',
       width: '48px',
       height: '120px',
+      cursor: 'pointer',
+    },
+    shadow: {
+      display: 'flex',
+      justifyContent: 'space-around',
+      flexDirection: 'column',
+      alignItems: 'center',
+      borderRadius: '90px',
+      width: '48px',
+      height: '120px',
+      boxShadow: '-1px 6px 8px',
+      backgroundColor: '#FFFFFF',
+    },
+    container: {
+      margin: '24px',
     },
   });
   return (
-    <div className={css(Styles.menu)}>
-      <GridViewIcon onClick={onClick} />
-      <SportsBarIcon onClick={onClick} />
-      <CloseIcon onClick={onClick} />
+    <div
+      className={css(Styles.container)}
+    >
+      <div className={css(Styles.menu)} onClick={onClick}>
+        <div className={css(Styles.shadow)}>
+          <GridViewIcon />
+          <SportsBarIcon />
+          <CloseIcon />
+        </div>
+      </div>
     </div>
+
   );
 };
 
